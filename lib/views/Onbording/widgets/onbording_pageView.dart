@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
+import '../../../const/widgets/const_button.dart';
+import '../../authentication/loginaccountview/login_account_view.dart';
 import '../data/model.dart';
 
 class OnbordingPageView extends StatelessWidget {
@@ -63,21 +64,16 @@ class OnbordingPageView extends StatelessWidget {
               ),
               TextButton(
                   onPressed: () {
-                    controllel.jumpToPage(3);
+                    controllel.jumpToPage(2);
                   },
                   child: const Text('Skip')),
-              Container(
-                width: 350,
-                height: 60,
-                decoration: BoxDecoration(
-                    color: const Color(0xffF86A2E),
-                    borderRadius: BorderRadius.circular(25)),
-                child: const Center(
-                    child: Text(
-                  'Next',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                )),
+               ButtonConst(
+                text: 'Next', padge: (){
+                   Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const LoginAccountView()));
+                },
               ),
+              const Spacer(),
               const Spacer(),
               const Text(
                 'Already Have an Account',

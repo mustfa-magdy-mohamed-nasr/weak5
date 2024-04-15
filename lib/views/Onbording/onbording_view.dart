@@ -37,19 +37,3 @@ class _OnbordingState extends State<Onbording> {
   }
 }
 
-/**
- * PageView(
-          controller: controllel,
-          children: [
-            OnbordingPageView(
-              controllel: controllel,
-            ),
-            OnbordingPageView(
-              controllel: controllel,
-            ),
-            OnbordingPageView(
-              controllel: controllel,
-            ),
-          ],
-        ),
- */
